@@ -1,0 +1,83 @@
+[
+  {
+    "question": "Have you ever been diagnosed with cancer?",
+    "type": "options",
+    "options": ["yes", "no"]
+  },
+  {
+    "question": "Are you male or female?",
+    "type": "options",
+    "options": ["male", "female"]
+  },
+  {
+    "question": "How old are you?",
+    "type": "text"
+  },
+  {
+    "question": "How tall are you?",
+    "type": "text"
+  },
+  {
+    "question": "How much do you weigh?",
+    "type": "text"
+  },
+  {
+    "question": "How old were you when you started menstruating or having your period?",
+    "type": "options",
+    "options": ["Less than 15 years old", "15 or older"]
+  },
+  {
+    "question": "Has your mother ever been diagnosed with breast cancer?",
+    "type": "options",
+    "options": ["yes", "no", "don't know"]
+  },
+  {
+    "question": "If any women in your family have had breast cancer",
+    "type": "options",
+    "options": ["yes", "no"]
+  },
+  {
+    "question": "Have you been told you have a genetic mutation that raises your risk for breast cancer? Examples include mutations in the following genes: BRCA1, BRCA2, TP53, PTEN and CDH1.",
+    "type": "options",
+    "options": ["yes", "no", "don't know"]
+  },
+  {
+    "question": "Have you ever been told by a doctor or nurse practitioner that you have benign or non-cancerous changes in your breasts?",
+    "type": "options",
+    "options": ["yes", "no", "don't know"]
+  },
+  {
+    "question": "Have you had or do you have ovarian cancer?",
+    "type": "options",
+    "options": ["yes", "no"]
+  },
+  {
+    "question": "Have you had radiation therapy to your chest to treat another type of cancer?",
+    "type": "options",
+    "options": ["yes", "no"]
+  },
+  {
+    "question": "If you are past menopause, how old were you when menopause began?",
+    "type": "text"
+  },
+  {
+    "question": "Are you currently taking combined hormone therapy (both estrogen and progesterone) to treat symptoms of menopause?",
+    "type": "options",
+    "options": ["yes", "no"]
+  },
+  {
+    "question": "Are you currently taking hormone-based birth control, such as birth control pills?",
+    "type": "options",
+    "options": ["yes", "no"]
+  },
+  {
+    "question": "Do you drink alcohol?",
+    "type": "options",
+    "options": ["yes", "no"]
+  },
+  {
+    "question": "Do you smoke?",
+    "type": "options",
+    "options": ["yes", "no"]
+  }
+]
