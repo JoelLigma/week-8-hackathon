@@ -5,6 +5,7 @@ const assessmentRoute = require("./assessmentRoute.js");
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static("./src/server/public"));
 
 app.use("/", assessmentRoute);
 

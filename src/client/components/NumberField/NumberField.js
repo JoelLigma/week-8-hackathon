@@ -1,3 +1,5 @@
+import "./NumberField.scss";
+
 export default function NumberField(props) {
   return (
     <input
