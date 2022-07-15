@@ -29,9 +29,12 @@ function assessmentToText(questions) {
   return lines.join("\n");
 }
 
-route.post("/assessment", (req, res) => {
-  const risk = assessmentRiskCalculator(assessmentRiskCalculator);
-  const resultsText = assessmentToText(req.body);
+route.post("/assessment", async (req, res) => {
+  const risk = await assessmentRiskCalculator(assessmentRiskCalculator);
+  let resultsText = assessmentToText(req.body);
+
+  resultsText += "\n\n ";
+
   const resultsUUID = uuidv4();
 
   fs.writeFileSync(`./src/server/results/${resultsUUID}`, resultsText, {

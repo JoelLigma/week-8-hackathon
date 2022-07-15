@@ -1,19 +1,63 @@
+@use "../../../styles/partials/mixins" as mixins;
+@use "../../../styles/partials/cta-btn" as *;
+
 .assessment-form {
+    @include mixins.section-spacing;
 
 
     &__control {
         display: flex;
         flex-direction: column;
         margin-bottom: 1.6rem;
-
+        @include mixins.text-label;
+        border-bottom: 1px solid #E1E1E1;
+        padding-bottom: 1.6rem;
     }
 
     &__answer {
-
         color: #000;
         text-transform: capitalize;
         font-weight: normal;
     }
 }
 
-.wrapper {}
+.assessment-results {
+    margin: 4rem 0;
+    text-align: center;
+
+    &__risk {
+        font-weight: bold;
+        font-size: 3rem;
+        margin: 1rem 0;
+
+    }
+
+    &__risk-text {
+
+        &--low {
+            color: rgb(9, 129, 0);
+        }
+
+        &--average {
+            color: rgb(217, 164, 4);
+        }
+
+        &--high {
+            color: rgb(197, 0, 0);
+        }
+    }
+
+    &__download-link {
+        font-size: 2rem;
+        text-decoration: underline;
+
+        &:hover {
+            color: #0095FF;
+        }
+
+    }
+}
+
+.wrapper {
+    @include mixins.wrapper
+}

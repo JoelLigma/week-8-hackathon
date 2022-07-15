@@ -1,8 +1,24 @@
-.assessment {
+@use "../../../styles/partials/mixins" as mixins;
 
+.assessment {
+    @include mixins.wrapper;
+    @include mixins.section-spacing;
 
     &__content {
         display: flex;
         flex-direction: column;
+    }
+
+    &__title {
+        @include mixins.pageHeader;
+    }
+
+    &__text {
+        @include mixins.text;
+        text-indent: 1rem;
+
+        &+& {
+            margin-top: 1rem;
+        }
     }
 }

@@ -1,0 +1,39 @@
+@use "../../../styles/partials/cta-btn" as *;
+@use "../../../styles/partials/mixins" as mixins;
+
+.home {
+    @include mixins.section-spacing;
+    @include mixins.wrapper;
+
+    &__header {
+        @include mixins.pageHeader;
+    }
+}
+
+.banner {
+
+
+    display: flex;
+    flex-direction: row;
+
+
+
+    &__details {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image {
+        flex: 0 0 auto;
+        width: 40rem;
+    }
+
+    &__start-now {
+        padding: 1rem 3rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
