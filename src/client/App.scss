@@ -1,0 +1,114 @@
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/variables" as *;
+
+.header {
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2.4rem 1.6rem 1.6rem;
+  background-color: #fafafa;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.4rem 3.6rem;
+    gap: 12rem;
+    width: 100%;
+  }
+
+  @include desktop {
+    padding: 2.4rem calc((100vw - 1208px) / 2);
+  }
+
+  &__logo {
+    width: auto;
+    height: 7rem;
+    margin: -2rem 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.6rem;
+
+    @include tablet {
+      flex-direction: row;
+      width: auto;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem 1rem 0;
+    font-weight: 600;
+
+    // &:hover {
+    //   background-color: #e1e1e1;
+    // }
+
+    @include tablet {
+      display: flex;
+      width: auto;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    gap: 1.6rem;
+    height: 4rem;
+
+    @include tablet {
+      width: 21.5rem;
+    }
+  }
+
+  &__search {
+    // background-image: url("../../assets/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: 1.6rem;
+    background-color: $brainflix-alabaster;
+    border-radius: 4px;
+    padding: 1.5rem 1.2rem 1.2rem 4rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $brainflix-mercury;
+    font-family: $font-stack;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+
+    &::placeholder {
+      color: $brainflix-black;
+    }
+
+    &:focus {
+      border: 2px solid $brainflix-blue;
+    }
+
+    @include tablet {
+      padding: 1.8rem 1.6rem 1.6rem 4rem;
+      width: 100%;
+      margin-right: 2.4rem; // new
+      margin-left: -2rem; // new
+    }
+  }
+
+  &__upload-img {
+    height: 1.25rem;
+  }
+}

@@ -15,6 +15,10 @@ app.get("/test", (req, res) => {
   res.send("It works!");
 });
 
+app.post("/bookings", (res, req) => {
+  res.status(201).json({ success: true });
+});
+
 const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

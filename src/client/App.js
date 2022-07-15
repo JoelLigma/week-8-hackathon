@@ -3,11 +3,16 @@ import { Link, Route, Switch } from "react-router-dom";
 import BookingPage from "./pages/Booking/Booking.js";
 import axios from "axios";
 import Assessment from "./pages/Assessment/Assessment";
+import "./App.scss";
+import image from "../download.png";
 
-const App = () => {
-  const { dateSelected, setdateSelected } = useState(new Date().getDate());
+class App extends React.Component {
+  state = {
+    dateSelected: new Date().getDate(),
+  };
+  // const { dateSelected, setdateSelected } = useState(new Date().getDate());
 
-  const bookingSubmitHandler = (e) => {
+  bookingSubmitHandler = (e) => {
     e.preventDefault();
     //FIXME: URL missing
     const url = "";
@@ -19,7 +24,7 @@ const App = () => {
         phone: e.target.phone.value,
         appointmentType: e.target.appointmentType.value,
         time: e.target.time.value,
-        date: `${dateSelected}/${new Date().getMonth()}/${
+        date: `${this.dateSelected}/${new Date().getMonth()}/${
           new Date().getFullYear
         }`,
       })
@@ -28,34 +33,49 @@ const App = () => {
       })
       .catch((error) => console.log(error));
   };
-  const calenderClickHandler = (_e, clickedId) => {
-    setdateSelected({ clickedId });
+
+  calenderClickHandler = (_e, clickedId) => {
+    this.setState({ dateSelected: clickedId });
+    // setdateSelected(clickedId);
   };
 
-  // useEffect() {
+  render() {
+    return (
+      <div className="App">
+        <header className="header">
+          <nav className="navbar">
+            <Link to="/">
+              <img src={image} alt="brainflix logo" className="navbar__logo" />
+            </Link>
+            <ul className="navbar__list">
+              <li className="navbar__item">
+                <div className="navbar__container"></div>
+              </li>
+              <Link to="/bookings">
+                <li className="navbar__item">Book an Appointment</li>
+              </Link>
+            </ul>
+          </nav>
+        </header>
 
-  // }
-  return (
-    <div className="App">
-      {console.log(Assessment)}
-      <h1 className="home__header">Header</h1>
-      <Link to="/bookings">
-        <button>Book an appointment</button>
-      </Link>
-      <Route exact path="/" component={Assessment} />
-      <Switch>
-        <Route
-          path="/bookings"
-          render={() => (
-            <BookingPage
-              calenderClickHandler={calenderClickHandler}
-              dateSelected={dateSelected}
-            />
-          )}
-        />
-      </Switch>
-    </div>
-  );
-};
+        {/* <Link to="/bookings">
+          <button>Book an appointment</button>
+        </Link> */}
+        <Route exact path="/" component={Assessment} />
+        <Switch>
+          <Route
+            path="/bookings"
+            render={() => (
+              <BookingPage
+                calenderClickHandler={this.calenderClickHandler}
+                dateSelected={this.state.dateSelected}
+              />
+            )}
+          />
+        </Switch>
+      </div>
+    );
+  }
+}
 
 export default App;
