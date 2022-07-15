@@ -11,15 +11,15 @@
   },
   {
     "question": "How old are you?",
-    "type": "text"
+    "type": "number"
   },
   {
     "question": "How tall are you?",
-    "type": "text"
+    "type": "number"
   },
   {
     "question": "How much do you weigh?",
-    "type": "text"
+    "type": "number"
   },
   {
     "question": "How old were you when you started menstruating or having your period?",
@@ -58,7 +58,7 @@
   },
   {
     "question": "If you are past menopause, how old were you when menopause began?",
-    "type": "text"
+    "type": "number"
   },
   {
     "question": "Are you currently taking combined hormone therapy (both estrogen and progesterone) to treat symptoms of menopause?",

@@ -133,7 +133,7 @@ const BookingPage = ({
                             selectedDate = num;
                             calenderClickHandler(e, num);
                           }
-                        : ""
+                        : null
                     }
                   >
                     <span

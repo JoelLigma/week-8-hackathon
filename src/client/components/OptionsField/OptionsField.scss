@@ -1,0 +1,8 @@
+.assessment-form__option {
+    margin-right: 0.5rem;
+
+    &+& {
+        margin-left: 1.6rem;
+    }
+
+}
